@@ -18,7 +18,12 @@ namespace LearningWPF2
         {
             InitializeComponent();
 
-            this.DataContext = new Class1();
+            this.DataContext = new DirectoryStructureViewModel();
+
+            /* var d = new DirectoryStructureViewModel();
+            var item1 = d.Items[0];
+
+            d.Items[0].ExpandCommand.Execute(null); */
 
             /* пример, чтобы посмотреть, что такое HeaderTemplate (см. описание, появляющееся после точки) 
              var t = new TreeViewItem();
