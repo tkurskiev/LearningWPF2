@@ -26,9 +26,12 @@
             </TreeView.ItemContainerStyle>
 
             <TreeView.ItemTemplate>
-                <HierarchicalDataTemplate ItemStringFormat="{Binding Children}">
+                <HierarchicalDataTemplate ItemsSource="{Binding Children}">
                     <StackPanel Orientation="Horizontal">
-                        <
+                        <Image Width="20" Margin="3" 
+                                           Source="{Binding Type,
+                                        Converter={x:Static local:HeaderToImageConverter.Instance}}"/>
+                        <TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
                     </StackPanel>
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>
